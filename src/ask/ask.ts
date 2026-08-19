@@ -779,6 +779,7 @@ function lexical(
                   graph: candidate.graph,
                   rankFactor: candidate.rankFactor,
                   baselineScore: candidate.score,
+                  baselineTieKey: symbolTitle(candidate.id),
                   matchedTerms: matchedTermsById.get(candidate.id) ?? new Set<string>(),
                   matchedStrongTerms:
                     matchedStrongTermsById.get(candidate.id) ?? new Set<string>(),
@@ -978,6 +979,7 @@ function lexical(
             graph: candidate.graph,
             rankFactor: candidate.rankFactor,
             baselineScore: candidate.baseline,
+            baselineTieKey: symbolTitle(candidate.id),
             matchedTerms: matchedTermsById.get(candidate.id) ?? new Set<string>(),
             matchedStrongTerms:
               matchedStrongTermsById.get(candidate.id) ?? new Set<string>(),
